@@ -1,6 +1,11 @@
-<div *ngFor="let pokemon of pokemons">
-    <h3>{{ pokemon.name }}</h3>
-    <p>Catégorie : {{ pokemon.type.join("-") }}</p>
-    <p>Taille : {{ pokemon.height/100 }} m</p>
-    <p>Poids : {{ pokemon.weigth/100 }} kg</p>
+<div class="m-2">
+<h2>Les pokémons :</h2>
+
+<div *ngFor="let pokemon of pokemons" class="relative">
+    <div class="border border-gray-200 rounded-lg p-4 flex flex-col items-center"></div>
+    <h3 class="text-lg font-bold mb-2">{{ pokemon.name }}</h3>
+    <p class="mb-1">Catégorie : {{ pokemon.type.join("-") }}</p>
+    <p class="mb-1">Taille : {{ pokemon.height/100 }} m</p>
+    <p class="mb-1">Poids : {{ pokemon.weigth/100 }} kg</p>
+</div>
 </div>
