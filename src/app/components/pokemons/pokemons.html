@@ -1,1 +1,6 @@
-<p>pokemons works!</p>
+<div *ngFor="let pokemon of pokemons">
+    <h3>{{ pokemon.name }}</h3>
+    <p>Catégorie : {{ pokemon.type.join("-") }}</p>
+    <p>Taille : {{ pokemon.height/100 }} m</p>
+    <p>Poids : {{ pokemon.weigth/100 }} kg</p>
+</div>
