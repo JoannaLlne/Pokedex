@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { PokemonService } from '../../../services/pokemon-service';
 
 @Component({
   selector: 'app-generations',
@@ -10,15 +11,12 @@ import { Component } from '@angular/core';
 export class Generations {
   public generations : Array<string>
 
-  constructor() {
+  constructor(@Inject (PokemonService) private pokemonService: PokemonService) {
     this.generations = []
+    this.getGeneration()
+  }
 
-    this.generations.push("Génération I")
-    this.generations.push("Génération II")
-    this.generations.push("Génération III")
-    this.generations.push("Génération IV")
-    this.generations.push("Génération V")
-    this.generations.push("Génération VI")
-    this.generations.push("Génération VII")
+  getGeneration(){
+    this.generations = this.pokemonService.getAllGenerations()
   }
 }

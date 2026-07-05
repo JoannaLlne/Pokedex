@@ -8,6 +8,22 @@ import { Pokemon } from '../app/components/models/pokemon';
 export class PokemonService {
     constructor() {
     }
+
+
+    getAllGenerations() {
+        let generations = []
+
+    generations.push("Génération I")
+    generations.push("Génération II")
+    generations.push("Génération III")
+    generations.push("Génération IV")
+    generations.push("Génération V")
+    generations.push("Génération VI")
+    generations.push("Génération VII")
+
+    return generations
+    }
+
         getAllPokemons() {
             let pokemons : Array<Pokemon> = []
 
