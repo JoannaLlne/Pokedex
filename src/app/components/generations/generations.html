@@ -1,8 +1,8 @@
 <div class="m-2">
-<h2>Les différentes générations</h2>
-<ul class="list-none pl-4">
-    <li *ngFor="let gen of generations" class="text-blue-400 hover:text-blue-800 cursor-pointer text-decoration-none">
-        {{ gen }}
-    </li>
-</ul>
+  <h2>Les différentes générations</h2>
+  <ul class="list-none pl-4">
+    @for (item of generations; track item) {
+      <li class="text-blue-500 hover:text-blue-700 cursor-pointer">{{ item.name | uppercase }}</li>
+    }
+  </ul>
 </div>
