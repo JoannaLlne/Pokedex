@@ -6,6 +6,8 @@ import { Pokemon } from '../app/components/models/pokemon';
 })
 
 export class PokemonService {
+public BASE_URL : string = 
+
     constructor() {
     }
 
