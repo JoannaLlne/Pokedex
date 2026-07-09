@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Pokemons } from './components/pokemons/pokemons';
-import { Generations } from './components/generations/generations';
+import { PokemonsComponent } from './components/pokemons/pokemons';
+import { GenerationsComponent } from './components/generations/generations';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Pokemons, Generations],
+  imports: [RouterOutlet, PokemonsComponent, GenerationsComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

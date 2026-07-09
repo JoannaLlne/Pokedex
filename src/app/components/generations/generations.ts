@@ -12,9 +12,10 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     HttpClientModule,
   ],
   providers: [PokemonService],
-  templateUrl: './generations.component.html',
-  styleUrl: './generations.component.css'
+  templateUrl: './generations.html',
+  styleUrl: './generations.css'
 })
+
 export class GenerationsComponent {
   public generations: Array<Generation>;
 
@@ -29,3 +30,5 @@ export class GenerationsComponent {
   }
 
 }
+
+export type { Generation };

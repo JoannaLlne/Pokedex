@@ -10,8 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
   standalone: true,
   imports: [HttpClientModule, TitleCasePipe,],
   providers: [PokemonService],
-  templateUrl: './pokemons.component.html',
-  styleUrl: './pokemons.component.css'
+  templateUrl: './pokemons.html',
+  styleUrl: './pokemons.css'
 })
 export class PokemonsComponent {
   public pokemons: Array<Pokemon>;
@@ -35,9 +35,10 @@ export class PokemonsComponent {
       this.pokemonService.getPokemonDetail(pokemon.url).subscribe(detail => {
         pokemon.height = detail.height;
         pokemon.weight = detail.weight;
-        pokemon.sprites = detail.sprites;
       });
     })
   }
 }
 
+
+export type { Pokemon };

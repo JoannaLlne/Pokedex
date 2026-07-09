@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
-import {Pokemon} from "../models/pokemon";
+import {Pokemon} from "../components/models/pokemon";
 import {HttpClient} from "@angular/common/http";
-import {Generation} from "../models/generation";
+import {Generation} from "../components/models/generation";
 import {mapOneOrManyArgs} from "rxjs/internal/util/mapOneOrManyArgs";
 import {map, Observable} from "rxjs";
 
