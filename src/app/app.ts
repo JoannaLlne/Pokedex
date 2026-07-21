@@ -6,10 +6,11 @@ import { GenerationsComponent } from './components/generations/generations';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PokemonsComponent, GenerationsComponent],
+  standalone: true,
+  imports: [RouterOutlet, GenerationsComponent, PokemonsComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('pokedex');
+export class AppComponent {
+  title = 'PokemonManager';
 }

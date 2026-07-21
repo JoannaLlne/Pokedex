@@ -35,6 +35,7 @@ export class PokemonsComponent {
       this.pokemonService.getPokemonDetail(pokemon.url).subscribe(detail => {
         pokemon.height = detail.height;
         pokemon.weight = detail.weight;
+        pokemon.sprites = detail.sprites;
       });
     })
   }
